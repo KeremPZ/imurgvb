@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #171a21;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Menü elemanları arasındaki boşluk */
+}
+
+/* HEADER DÜZENİ */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2e3035;
+    padding: 10px 20px;
+    gap: 20px; /* Logo, Nav ve Sağ kısım arasındaki ana boşluk */
+}
+
+/* LOGO */
+.nav-barlogo-header a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1bb76e; /* Imgur yeşili */
+}
+
+/* NAVİGASYON (Tüm orta alanı kaplar) */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1; /* Logodan sonra kalan tüm boşluğu kaplar */
+    gap: 20px;
+}
+
+.sol-sidebar, .sag-sidebar {
+    display: flex;
+    align-items: center;
+}
+
+/* ORTA SİDEBAR (Arama Çubuğu) */
+.orta-sidebar {
+    flex: 1; /* Arama kutusunun ortada esnemesini sağlar */
+    max-width: 500px; /* Çok fazla uzamasını engeller */
+    margin: 0 auto; /* Tam ortalar */
+}
+
+.orta-sidebar input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #3c424b;
+    color: #ffffff;
+    outline: none;
+}
+
+.orta-sidebar input::placeholder {
+    color: #b2b6bd;
+}
+
+/* BUTON RÖTUŞLARI */
+.sol-sidebar a, .sag-sidebar a {
+    padding: 8px 14px;
+    border-radius: 4px;
+    background-color: #3c424b;
+    font-size: 14px;
+}
+
+.sol-sidebar a:hover, .sag-sidebar a:hover {
+    background-color: #4c535e;
+}
+main{
+    display: flex;
+    gap: 10px;
+}
+/* DETAILS & SUMMARY ŞEKİLLENDİRME */
+details {
+    width: 100%;
+    padding: 10px 10px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #1bb76e;
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+/* YATAY ÇİZGİ ŞEKLİNDE KAYDIRILABİLİR ALAN */
+/* CONTAINER (Dış Kapsayıcı) */
+.details-conteiner {
+    display: flex;
+    width: 100%;
+    gap: 8px; /* Kutular arası boşluk */
+    align-items: stretch;
+}
+
+/* TÜM KUTULARIN ORTAK STİLİ (Varsayılan - Sağdaki Küçük Kutular) */
+.details-conteiner-box {
+    flex: 1; /* Standart kutular 1 birim genişlik kaplar */
+    min-height: 110px;
+    background-color: #3c424b;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Yazıları kutunun altına hizalar */
+    padding: 10px 6px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.details-conteiner-box:hover {
+    transform: translateY(-4px);
+}
+
+/* İLK 2 KUTUYA ÖZEL GENİŞLİK (SOLDTAKİ GENİŞ KUTULAR) */
+.details-conteiner-box:nth-child(1),
+.details-conteiner-box:nth-child(2) {
+    flex: 2.2; /* Diğer kutuların 2 katından biraz daha geniş kaplar */
+}
+
+/* YAZI BOYUTLARI VE DÜZENİ */
+.details-conteiner-box h1 {
+    font-size: 0.85rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.details-conteiner-box h3 {
+    font-size: 0.65rem;
+    color: #b2b6bd;
+    font-weight: normal;
+}
+
+.details-conteiner::-webkit-scrollbar-track {
+    background: #171a21;
+}
