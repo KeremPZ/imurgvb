@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;   
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: #141518;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Kapsayıcı kutuyu sayfada ortalayalım */
+.site-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+/* DOĞRUDAN RESME BOYUT VERİYORUZ */
+.site-logo img {
+    height: 250px; /* İstediğin ideal yükseklik */
+    width: auto;  /* Oranı korusun */
+    display: block;
+    object-fit: contain;
+}
+.sing-in-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.sing-in-form-main {
+    background-color: #212328;
+    border-radius: 8px;
+    padding: 30px; /* 150px yerine derli toplu iç boşluk */
+    width: 100%;
+    max-width: 380px; /* Kutunun ekranda aşırı yayılmasını engeller */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* KİLİT NOKTA: GAP'İ DOĞRUDAN FORM'A VERİYORUZ */
+.sing-in-form-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* İNPUTLAR VE BUTON ARASINDAKİ TEMİZ BOŞLUK */
+}
+
+/* İNPUT STİLLERİ */
+.sing-in-form-main-input input {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: #141518;
+    border: 1px solid #34373d;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+/* İNPUTA TIKLANDIĞINDA ÇIKAN YEŞİL ÇERÇEVE */
+.sing-in-form-main-input input:focus {
+    border-color: #1bb76e;
+}
+
+/* GİRİŞ BUTONU */
+.sing-in-form-main button {
+    padding: 12px;
+    background-color: #5468ff;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.sing-in-form-main button:hover {
+    background-color: #3f52e3;
+}
+.foot{
+  position:fixed; /* Sayfaya sabitler */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 0; /* İçeriğin arkasında kalmasını sağlar */
+  color: aliceblue;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: medium;
+  
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+}

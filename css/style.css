@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #171a21;
+    background-color: #141518;
     color: #ffffff;
     font-family: Arial, sans-serif;
 }
@@ -27,7 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #2e3035;
+    background-color: #2e30355b;
     padding: 10px 20px;
     gap: 20px; /* Logo, Nav ve Sağ kısım arasındaki ana boşluk */
 }
@@ -153,4 +153,64 @@ summary {
 
 .details-conteiner::-webkit-scrollbar-track {
     background: #171a21;
+}
+.lang-switch-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70px;
+    height: 32px;
+    background-color: #3c424b;
+    border-radius: 20px;
+    padding: 2px 4px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lang-option {
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* SÜZÜLEN YUVARLAK (SLIDER) */
+.lang-slider {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 28px;
+    height: 28px;
+    background-color: #1bb76e; /* Imgur Yeşili Vurgu */
+    border-radius: 50%;
+    /* Temiz süzülme efekti (cubic-bezier) */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* TÜRKÇE SEÇİLDİĞİNDE YUVARLIĞI SAĞA SÜZDÜR */
+.lang-switch-container.is-tr .lang-slider {
+    transform: translateX(34px);
+}
+.site-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* DOĞRUDAN RESME BOYUT VERİYORUZ */
+.site-logo img {
+    height: 75px; /* İstediğin ideal yükseklik */
+    width: auto;  /* Oranı korusun */
+    display: block;
+    object-fit: contain;
+    border-radius: 5px;
+    
 }
