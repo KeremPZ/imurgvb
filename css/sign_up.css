@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: #141518;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo Alanı */
+.site-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.site-logo img {
+  height: 120px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Form Kapsayıcısı */
+.form-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 0 20px 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-form {
+  background-color: #1e2025;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #2d3037;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sign-up-form h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Input ve Label Yapısı */
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.input-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #a0a5b1;
+}
+
+.input-group input,
+.input-group select,
+.dob-selects select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #141518;
+  border: 1px solid #2d3037;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.dob-selects select:focus {
+  border-color: #1bb76e;
+}
+
+/* Select içindeki siyah yazıları düzenleme */
+.input-group select option,
+.dob-selects select option {
+  background-color: #1e2025;
+  color: #ffffff;
+}
+
+/* Doğum Tarihi Seçim Alanı */
+.dob-selects {
+  display: flex;
+  gap: 8px;
+}
+
+.dob-selects select {
+  flex: 1;
+}
+
+/* Gönder Butonu */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #1bb76e;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #169b5c;
+}
+
+/* Footer */
+.foot {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #141518;
+  color: #717684;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  border-top: 1px solid #2d3037;
+}

@@ -3,116 +3,130 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css">
-    <title>imurgvs</title>
-    <meta name="keywords" content="imurgvs" />
-    <link rel="shortcut icon" href="https://s.imgur.com/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/sign_up.css" />
+    <title>imurgvb - Sign Up</title>
+    <meta name="keywords" content="imurgvb" />
+    <link
+      rel="shortcut icon"
+      href="/img/faviko/faviko.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>    
+  <body>
     <header>
-      <div>
-        <h1 class="nav-barlogo-header">
-          <a href="index.html">imurgvb</a>
-        </h1>
-      </div>
-      <nav>
-        <div class="sol-sidebar">
-          <ul>
-            <li>
-              <a href="" data-i18n="newPost">New Post</a>
-            </li>
-            <li>
-              <a href="" data-i18n="makeMeme">Make a Meme</a>
-            </li>
-            <li>
-              <a href="" data-i18n="openArcade">Open Arcade</a>
-            </li>
-          </ul>
-        </div>
-        <div class="orta-sidebar">
-          <input type="text" placeholder="Find Post , Tags, or Users!" />
-        </div>
-        <div class="sag-sidebar">
-          <ul>
-            <!-- DİL DEĞİŞTİRME BUTONLARI -->
-            <div class="lang-switch-container" id="langToggle">
-              <div class="lang-option" onclick="setLanguage('en')" title="English">🇬🇧</div>
-              <div class="lang-option" onclick="setLanguage('tr')" title="Türkçe">🇹🇷</div>
-              <div class="lang-slider"></div>
-            </div>
-            <li>
-              <a href="html/sign_in.html" data-i18n="signIn">Sign in</a>
-            </li>
-            <li>
-              <a href="html/sign_up.html" data-i18n="signUp">Sign up</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="home-hader">
-        <div class="Mesagge welcome" data-i18n="welcomeMsg">Soak your logs in wood.</div>
+      <div class="site-logo">
+        <a href="/index.html">
+          <img src="/img/logo/i.png" alt="imurgvb logo" />
+        </a>
       </div>
     </header>
 
-    <main>
-      <details>
-        <summary data-i18n="moreTags">More Tags</summary>
-        <div class="details-conteiner">
-          <div class="details-conteiner-box">
-            <a href="" style="background-image: url(https://i.imgur.com/jT7PdF3_d.jpg?maxwidth=800&shape=thumb&fidelity=high)">
-              <h1>IMURG ARCADE</h1>
-              <h3>DAILY GAMES</h3>
-            </a>
+    <main class="form-container">
+      <form action="" method="post" class="sign-up-form">
+        <h2>Account Register</h2>
+
+        <!-- Ad ve Soyad -->
+        <div class="input-row">
+          <div class="input-group">
+            <input
+              type="text"
+              name="first_name"
+              id="first-name"
+              placeholder="Name"
+              required
+            />
           </div>
-          <div class="details-conteiner-box">
-            <a href="">
-              <h1>Woodworking</h1>
-              <h3>FEATURED • 20.112 Posts</h3>
-            </a>
-          </div>
-          <div class="details-conteiner-box">
-            <a href="">
-              <h1>Funny</h1>
-              <h3>2.298.068 <br> Posts</h3>
-            </a>
-          </div>
-          <div class="details-conteiner-box">
-            <a href="">
-              <h1>Aww</h1>
-              <h3>686.762 <br> Posts</h3>
-            </a>
-          </div>
-          <div class="details-conteiner-box">
-            <a href="">
-              <h1>Current events</h1>
-              <h3>422.796 <br> Posts</h3>
-            </a>
-          </div>
-          <div class="details-conteiner-box">
-            <a href="">
-              <h1>Anime</h1>
-              <h3>102.502 <br> Posts</h3>
-            </a>
-          </div>
-          <div class="details-conteiner-box">
-            <a href="">
-              <h1>Wallpaper</h1>
-              <h3>41.384 <br> Posts</h3>
-            </a>
-          </div>
-          <div class="details-conteiner-box">
-            <a href="">
-              <h1>Art</h1>
-              <h3>272.408 <br> Posts</h3>
-            </a>
+          <div class="input-group">
+            <input
+              type="text"
+              name="last_name"
+              id="last-name"
+              placeholder="Surname"
+              required
+            />
           </div>
         </div>
-      </details>
+
+        <!-- Doğum Tarihi -->
+        <div class="input-group dob-group">
+          <label class="input-label">Doğum Tarihi</label>
+          <div class="dob-selects">
+            <select name="dob_day" id="dob-day" required>
+              <option value="" disabled selected>Gün</option>
+            </select>
+
+            <select name="dob_month" id="dob-month" required>
+              <option value="" disabled selected>Ay</option>
+              <option value="1">Ocak</option>
+              <option value="2">Şubat</option>
+              <option value="3">Mart</option>
+              <option value="4">Nisan</option>
+              <option value="5">Mayıs</option>
+              <option value="6">Haziran</option>
+              <option value="7">Temmuz</option>
+              <option value="8">Ağustos</option>
+              <option value="9">Eylül</option>
+              <option value="10">Ekim</option>
+              <option value="11">Kasım</option>
+              <option value="12">Aralık</option>
+            </select>
+
+            <select name="dob_year" id="dob-year" required>
+              <option value="" disabled selected>Yıl</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Cinsiyet -->
+        <div class="input-group">
+          <label for="gender-select" class="input-label">Cinsiyet</label>
+          <select name="gender" id="gender-select" required>
+            <option value="" disabled selected>Cinsiyet seçiniz</option>
+            <option value="male">Erkek</option>
+            <option value="female">Kadın</option>
+            <option value="unspecified">Belirtmek istemiyorum</option>
+          </select>
+        </div>
+
+        <!-- E-Posta -->
+        <div class="input-group">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-posta"
+            required
+          />
+        </div>
+
+        <!-- Şifre -->
+        <div class="input-group">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Şifre"
+            required
+          />
+        </div>
+
+        <button type="submit" class="submit-btn">Sign Up</button>
+      </form>
     </main>
 
-    <footer></footer>
-    
-    <!-- Script dosyan js klasörü içindeyse 'js/script.js' yapabilirsin -->
-    <script src="js/script.js"></script>
+    <footer>
+      <div class="foot">
+        <p>terms</p>
+        <p>privacy</p>
+      </div>
+    </footer>
+
+    <script src="/js/birthday.js"></script>
   </body>
 </html>
