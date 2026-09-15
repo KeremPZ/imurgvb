@@ -6,10 +6,10 @@
 }
 
 body {
-    background-color: #141518;
+    background-color: #f6f4f0;
     display: flex;
     flex-direction: column;
-    
+    min-height: 100vh; /* Sayfayı ekran boyuna yayar */
 }
 
 /* Kapsayıcı kutuyu sayfada ortalayalım */
@@ -26,15 +26,17 @@ body {
     width: auto;  /* Oranı korusun */
     display: block;
     object-fit: contain;
+    border-radius: 9px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-.sing-in-form {
+.sign-in-form {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 0 20px;
 }
 
-.sing-in-form-main {
+.sign-in-form-main {
     background-color: #212328;
     border-radius: 8px;
     padding: 30px; /* 150px yerine derli toplu iç boşluk */
@@ -44,14 +46,14 @@ body {
 }
 
 /* KİLİT NOKTA: GAP'İ DOĞRUDAN FORM'A VERİYORUZ */
-.sing-in-form-main form {
+.sign-in-form-main form {
     display: flex;
     flex-direction: column;
     gap: 16px; /* İNPUTLAR VE BUTON ARASINDAKİ TEMİZ BOŞLUK */
 }
 
 /* İNPUT STİLLERİ */
-.sing-in-form-main-input input {
+.sign-in-form-main-input input {
     width: 100%;
     padding: 12px 14px;
     background-color: #141518;
@@ -64,12 +66,12 @@ body {
 }
 
 /* İNPUTA TIKLANDIĞINDA ÇIKAN YEŞİL ÇERÇEVE */
-.sing-in-form-main-input input:focus {
+.sign-in-form-main-input input:focus {
     border-color: #1bb76e;
 }
 
 /* GİRİŞ BUTONU */
-.sing-in-form-main button {
+.sign-in-form-main button {
     padding: 12px;
     background-color: #5468ff;
     border: none;
@@ -82,7 +84,7 @@ body {
     transition: background-color 0.2s ease;
 }
 
-.sing-in-form-main button:hover {
+.sign-in-form-main button:hover {
     background-color: #3f52e3;
 }
 .foot{
@@ -98,8 +100,5 @@ body {
   align-items: center;
   justify-content: center;
   font-size: medium;
-  
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-
+  background-color: #141518;
 }

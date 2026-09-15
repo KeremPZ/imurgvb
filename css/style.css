@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #141518;
+    background-color: #f6f4f0;
     color: #ffffff;
     font-family: Arial, sans-serif;
 }
@@ -28,7 +28,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #2e30355b;
+    background-color: #141518;
     padding: 10px 20px;
     gap: 20px; /* Logo, Nav ve Sağ kısım arasındaki ana boşluk */
 }

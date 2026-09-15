@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/sign_in.css" />
-    <title>imurgvb</title>
-    <meta name="keywords" content="imurgvs" />
+    <title>imurgvb - Sign In</title>
+    <meta name="keywords" content="imurgvb" />
     <link
       rel="shortcut icon"
       href="/img/faviko/faviko.png"
@@ -25,25 +25,27 @@
     </header>
 
     <main>
-      <div class="sing-in-form">
-        <div class="sing-in-form-main">
-          <form action="">
-            <div class="sing-in-form-main-input">
-              <input type="email" name="" id="" placeholder="Usermane or Email" />
+      <div class="sign-in-form">
+        <div class="sign-in-form-main">
+          <form action="" method="post" id="signInForm">
+            <div class="sign-in-form-main-input">
+              <input type="text" name="username_email" id="email" placeholder="Username or Email" required />
             </div>
-            <div class="sing-in-form-main-input">
-              <input type="password" name="" id="" placeholder="Password" />
+            <div class="sign-in-form-main-input">
+              <input type="password" name="password" id="password" placeholder="Password" required />
             </div>
             <button type="submit">Sign in</button>
           </form>
         </div>
       </div>
     </main>
+
     <footer>
       <div class="foot">
         <p>terms</p>
         <p>privacy</p>
       </div>
     </footer>
+    <script src="/js/sign_in.js"></script>
   </body>
 </html>
